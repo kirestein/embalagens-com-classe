@@ -55,6 +55,8 @@
               }
             ],
             "styles": [
+              "src/styles/theme.scss",
+              "src/styles/tailwind.css",
               "src/styles.scss"
             ]
           },
@@ -113,6 +115,8 @@
               }
             ],
             "styles": [
+              "src/styles/tailwind.css",
+              "src/styles/theme.scss",
               "src/styles.scss"
             ]
           }

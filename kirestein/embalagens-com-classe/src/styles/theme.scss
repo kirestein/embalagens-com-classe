@@ -1,0 +1,26 @@
+@use '@angular/material' as mat;
+
+$brand-primary: #1d4ed8;
+$brand-accent: #f59e0b;
+$brand-secondary: #16a34a;
+
+$primary-palette: mat.$blue-palette;
+$tertiary-palette: mat.$orange-palette;
+
+html {
+  @include mat.theme((
+    color: (
+      primary: $primary-palette,
+      tertiary: $tertiary-palette,
+    ),
+    typography: (
+      plain-family: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
+    ),
+    density: 0,
+  ));
+}
+
+:root {
+  --mat-sys-primary: #{$brand-primary};
+  --mat-sys-tertiary: #{$brand-accent};
+}
