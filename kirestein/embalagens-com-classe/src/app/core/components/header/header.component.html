@@ -1,12 +1,13 @@
 <mat-toolbar color="primary" class="fixed top-0 left-0 right-0 z-50 shadow-md bg-white/80 backdrop-blur supports-backdrop-blur">
   <div class="container mx-auto px-4 flex items-center justify-between w-full">
-    <button class="flex items-center gap-2" (click)="scrollTo('home')" aria-label="Ir para Home">
+    <a class="flex items-center gap-2" href="#home" (click)="scrollTo('home')" aria-label="Ir para Home">
       <img src="assets/images/logo.png" alt="EmbaClass" class="h-8 w-auto" onerror="this.style.display='none'" />
       <span class="font-semibold text-slate-900">EmbaClass</span>
-    </button>
+    </a>
 
     <nav class="hidden md:flex items-center gap-2">
       <a *ngFor="let item of nav"
+         [attr.href]="'#' + item.id"
          (click)="scrollTo(item.id)"
          class="px-3 py-2 rounded-full text-sm font-medium cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[color:var(--mat-sys-primary)]"
          [ngClass]="{
@@ -25,4 +26,4 @@
     </mat-menu>
   </div>
 </mat-toolbar>
-<div class="h-16 md:h-18"></div>
+<div class="h-16"></div>
