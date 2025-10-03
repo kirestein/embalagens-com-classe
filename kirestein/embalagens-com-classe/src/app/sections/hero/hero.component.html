@@ -1,0 +1,14 @@
+<section id="home" class="relative min-h-[100svh] grid place-items-center text-center">
+  <figure class="absolute inset-0 -z-10">
+    <img [src]="backgroundUrl" alt="Catálogo EmbaClass — primeira imagem" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
+  </figure>
+  <div class="container mx-auto px-6 max-w-4xl text-white space-y-6">
+    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Um toque de classe para o seu produto</h1>
+    <p class="text-base md:text-lg text-white/90">Embalagens plásticas com qualidade, inovação e parceria de ponta a ponta.</p>
+    <div class="flex items-center justify-center gap-3">
+      <button mat-flat-button color="primary" (click)="scrollTo('contato')">Fale conosco</button>
+      <button mat-stroked-button color="primary" (click)="scrollTo('sobre')">Conheça a EmbaClass</button>
+    </div>
+  </div>
+</section>

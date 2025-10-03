@@ -1,0 +1,35 @@
+<section id="contato" class="container mx-auto px-6 py-16">
+  <div class="grid md:grid-cols-12 gap-8">
+    <div class="md:col-span-5 space-y-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Fale com a gente</h2>
+      <p class="text-slate-700">E-mail: <a href="mailto:embaclass@embaclass.com.br" class="text-brand-primary underline">embaclass@embaclass.com.br</a></p>
+      <a class="inline-flex items-center gap-2 mt-2 px-4 py-2 rounded-md bg-green-500 text-white hover:bg-green-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-green-600" [href]="waLink" target="_blank" rel="noopener">
+        <span class="material-icons">whatsapp</span>
+        WhatsApp
+      </a>
+    </div>
+    <div class="md:col-span-7">
+      <form [formGroup]="form" (ngSubmit)="submit()" class="grid grid-cols-1 gap-4">
+        <mat-form-field appearance="outline">
+          <mat-label>Nome</mat-label>
+          <input matInput formControlName="name" required />
+        </mat-form-field>
+        <div class="grid md:grid-cols-2 gap-4">
+          <mat-form-field appearance="outline">
+            <mat-label>E-mail</mat-label>
+            <input matInput formControlName="email" required type="email" />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Telefone</mat-label>
+            <input matInput formControlName="phone" required />
+          </mat-form-field>
+        </div>
+        <mat-form-field appearance="outline">
+          <mat-label>Mensagem</mat-label>
+          <textarea matInput formControlName="message" rows="5" required></textarea>
+        </mat-form-field>
+        <button mat-flat-button color="primary" type="submit" [disabled]="sending()">{{ sending() ? 'Enviando...' : 'Enviar' }}</button>
+      </form>
+    </div>
+  </div>
+</section>
