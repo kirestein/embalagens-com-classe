@@ -1,0 +1,3 @@
+.supports-backdrop-blur:where(.backdrop-blur){
+  backdrop-filter: saturate(180%) blur(10px);
+}
